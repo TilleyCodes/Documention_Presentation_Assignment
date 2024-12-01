@@ -4,10 +4,9 @@
 import json
 from classes.conversion_item import ConversionItem
 
-# This class is a composition of ConversionItem and is responsible for saving and loading a conversion history to a JSON file
 class ConversionHistory():
     """
-    This class manages the currency conversion history stored in JSON file.
+    This class is a composition of COnversionItem and handles saving, clearing and loading the currency conversion history in JSON file.
 
     Attributes:
         file (str): Path to the JSON file for storing history.
