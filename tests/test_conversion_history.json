@@ -1,0 +1,9 @@
+[
+    {
+        "from_currency": "AUD",
+        "to_currency": "USD",
+        "amount": 200,
+        "rate": 0.5,
+        "description": "Testing"
+    }
+]
