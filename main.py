@@ -11,6 +11,14 @@ print(f"\n{Fore.white}{Back.blue}Welcome to the Currency Converter Application!{
 print(f"{Fore.white}Please select from the options below.")
 
 def user_menu():
+    """
+    This function displays the user menu with options for currency conversions and other features.
+
+    Prompts the user to select an option by entering a corresponding number.
+
+    Returns:
+        str: The user's menu selection as a string.
+    """
     print(f"\n{Fore.white}Enter{Style.reset} {Fore.green}1{Style.reset} {Fore.white}to convert currencies using live FX rate.{Style.reset}")
     print(f"{Fore.white}Enter{Style.reset} {Fore.green}2{Style.reset} {Fore.white}to convert currencies using your personalised FX rate.{Style.reset}")
     print(f"{Fore.white}Enter{Style.reset} {Fore.green}3{Style.reset} {Fore.white}to calculate the FX rate.{Style.reset}")
