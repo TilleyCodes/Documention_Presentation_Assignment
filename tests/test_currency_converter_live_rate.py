@@ -1,6 +1,10 @@
-# pylint: disable=missing-module-docstring
-# pylint: disable=trailing-whitespace
+"""This module tests the CurrencyConverterLiveRate class to:
+- convert currencies using a mock live rate
+"""
 
+# Importing CurrencyConverterLiveRate class
+# Source: local module - classes/converter_live_rate.py
+# Purpose: To convert the currencies using live exchange rates from exchangerates API
 from classes.currency_converter_live_rate import CurrencyConverterLiveRate
 
 def test_convert_rate(monkeypatch):
@@ -17,7 +21,7 @@ def test_convert_rate(monkeypatch):
     # pylint: disable-next=unused-argument
     def mock_get_live_rate(self, base_currency, currency, api_key):
         return 0.5
-    
+
     # Using a mocked live rate
     monkeypatch.setattr(CurrencyConverterLiveRate, "get_live_rate", mock_get_live_rate )
     converter = CurrencyConverterLiveRate()
@@ -25,6 +29,6 @@ def test_convert_rate(monkeypatch):
     result = converter.convert_currency("AUD", "USD", 200)
     assert result is not None
 
-    (converted_amount, rate) = result 
+    (converted_amount, rate) = result
     assert converted_amount == 100
     assert rate == 0.5

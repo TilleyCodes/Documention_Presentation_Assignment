@@ -1,12 +1,36 @@
-# pylint: disable=missing-docstring
 # pylint: disable=line-too-long
 
-# Imported from <link> for the purpose of .......
+"""This function module is for:
+- Converting currencies using live exchange rates
+- Performing currency conversions based on user exchange rate input
+- Calculating foreign exchange rates
+- Displaying currency codes in a formatted table
+- Managing and displaying conversion history
+"""
+
+# Importing colored for text formating
+# Source: https://pypi.org/project/colored/
+# Purpose: To style the text terminal output in different colours and background
 from colored import Fore, Style
+# Importing get_fiat_currencies for currency code retrieval
+# Source: https://pypi.org/project/currency-codes/
+# Purpose: Gets a list of currency codes to display
 from currency_codes import get_fiat_currencies
+# Importing tabulate for table formatting
+# Source: https://pypi.org/project/tabulate/
+# Purpose: Formats and displays the currency codes list into a table
 from tabulate import tabulate
+# Importing ConventionItem class
+# Source: local module - classes/conversion_item.py
+# Purpose: To capture the from_currency, to_currency, amount, rate, and description of the conversion item
 from classes.conversion_item import ConversionItem
+# Importing CurrencyConverterLiveRate class
+# Source: local module - classes/converter_live_rate.py
+# Purpose: To convert the currencies using live exchange rates from exchangerates API
 from classes.currency_converter_live_rate import CurrencyConverterLiveRate
+# Importing the CurrencyConverter class
+# Source: Local module - classes/currency_converter.py
+# Purpose: Performs currency conversion using a fixed exchange rate.
 from classes.currency_converter import CurrencyConverter
 
 def convert_with_live_rate(conversion_history):

@@ -1,19 +1,19 @@
 # pylint: disable=line-too-long
 # pylint: disable=invalid-name
 
-"""This is the main file to run the application."""
+"""This module is the main file to run the Currency Convert Application."""
 
-# Imported colored for text formating
+# Importing colored for text formating
 # Source: https://pypi.org/project/colored/
-# Purpose: To style the text terminal output in different colours and background
+# Purpose: To style the terminal output with different colours and background
 from colored import Fore, Back, Style
-# Imported ConventionHistory class
+# Importing ConventionHistory class
 # Source: local module - classes/conversion_history.py
 # Purpose: To save, retrieve and clear conversion history in a JOSN file
 from classes.conversion_history import ConversionHistory
-# Imported ConventionHistory class
-# Source: local module - classes/conversion_history.py
-# Purpose: To save, retrieve and clear conversion history in a JOSN file
+# Importing currency converter functions
+# Source: local module - functions/currency_converter_functions.py
+# Purpose: To print_currency_codes, calculate_fx_rate, convert_with_personal_rate, convert_with_live_rate and print_conversion_history
 from functions.currency_converter_functions import (print_currency_codes, calculate_fx_rate,
 convert_with_personal_rate, convert_with_live_rate, print_conversion_history)
 

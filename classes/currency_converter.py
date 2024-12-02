@@ -1,10 +1,10 @@
-# pylint: disable=missing-docstring
+"""This class module converts the currencies using a given exchaneg rate"""
 
 class CurrencyConverter:
     """
     Purpose:
-        This class is used to convert a given amount of currency based on a 
-        predefined exchange rate.
+        This class is used to convert a given amount of currency based on
+        the exchange rate.
 
     Attributes:
         rate (float): The exchange rate used for conversion.

@@ -1,6 +1,10 @@
-# pylint: disable=missing-docstring
 # pylint: disable=line-too-long
 
+"""This class module captures the from_currency, to_currency, amount, rate, and description of the conversion item"""
+
+# Imported colored for text formating
+# Source: https://pypi.org/project/colored/
+# Purpose: To style the text terminal output in different colours
 from colored import Fore, Style
 
 class ConversionItem:

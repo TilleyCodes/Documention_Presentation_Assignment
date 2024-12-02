@@ -1,10 +1,26 @@
-# pylint: disable=missing-docstring
 # pylint: disable=line-too-long
 
+"""This class module converts the currencies using live exchange rates from exchangerates API"""
+
+# Importing os for operating system interactions
+# Source: Python Standard Library
+# Purpose: To access the API key from .env file
 import os
+# Importing requests to make HTTP request
+# Source: https://pypi.org/project/requests/
+# Purpose: To send request to https://api.exchangeratesapi for the exchange rate
 import requests
+# Importing load_dotenv to create .env file to save API password
+# Source: https://pypi.org/project/python-dotenv/
+# Purpose: Loads API key from .env file OS
 from dotenv import load_dotenv
+# Imported colored for text formating
+# Source: https://pypi.org/project/colored/
+# Purpose: To style the text terminal output in different colours
 from colored import Fore, Style
+# Importing the CurrencyConverter class
+# Source: Local module - classes/currency_converter.py
+# Purpose: Converts currencies using a given exchange rate
 from classes.currency_converter import CurrencyConverter
 
 # Load the API key from the environment

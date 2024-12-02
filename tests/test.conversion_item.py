@@ -1,7 +1,17 @@
-# pylint: disable=missing-module-docstring
 # pylint: disable=line-too-long
 
+""" This module tests the ConversionItem class to:
+- convert user input to JSON dictionary
+- the return f-string output the conversion item
+"""
+
+# Importing colored for text formating
+# Source: https://pypi.org/project/colored/
+# Purpose: To style the text terminal output in different colours and background
 from colored import Fore, Style
+# Importing ConventionItem class
+# Source: local module - classes/conversion_item.py
+# Purpose: To capture the from_currency, to_currency, amount, rate, and description of the conversion item
 from classes.conversion_item import ConversionItem
 
 def test_conversion_item_json():

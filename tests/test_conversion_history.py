@@ -1,6 +1,14 @@
-# pylint: disable=missing-docstring
+"""This module tests ConversionItem and ConversionHistory classes to:
+- ensure the converted item is saved, cleared and loaded in JSON file.
+"""
 
+# Importing the ConversionItem class
+# Source: Local module - classes/conversion_item.py
+# Purpose: To capture currency conversion item currencies, amount, rate, and description
 from classes.conversion_item import ConversionItem
+# Importing the ConversionHistory class
+# Source: Local module - classes/conversion_history.py
+# Purpose: Saving, retrieving, and clearing currency conversion history in a JSON file
 from classes.conversion_history import ConversionHistory
 
 def test_save_conversion():

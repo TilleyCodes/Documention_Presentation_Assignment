@@ -1,12 +1,18 @@
 # pylint: disable=missing-docstring
 # pylint: disable=line-too-long
 
+# Importing json for JSON serialisation and deserialisation
+# Source: Python Standard Library
+# Purpose: To read and write JSON data for conversion history
 import json
+# Importing ConventionItem class
+# Source: local module - classes/conversion_item.py
+# Purpose: To capture the from_currency, to_currency, amount, rate, and description of the conversion item
 from classes.conversion_item import ConversionItem
 
 class ConversionHistory():
     """
-    This class is a composition of COnversionItem and handles saving, clearing and loading the
+    This class is a composition of ConversionItem and handles saving, clearing and loading the
     currency conversion history in JSON file.
 
     Attributes:

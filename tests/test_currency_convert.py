@@ -1,5 +1,10 @@
-# pylint: disable=missing-docstring
+"""This module tests CurrencyConverter class to:
+- ensure the converted amount is calculated corretly based on the exchange rate
+"""
 
+# Importing the CurrencyConverter class
+# Source: Local module - classes/currency_converter.py
+# Purpose: Performs currency conversion using a fixed exchange rate
 from classes.currency_converter import CurrencyConverter
 
 def test_convert():
