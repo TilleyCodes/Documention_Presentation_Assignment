@@ -1,5 +1,6 @@
-# pylint: disable=missing-docstring
 # pylint: disable=line-too-long
+
+"""This class module saves, clears and loads the converted item in JSON file"""
 
 # Importing json for JSON serialisation and deserialisation
 # Source: Python Standard Library
@@ -12,7 +13,7 @@ from classes.conversion_item import ConversionItem
 
 class ConversionHistory():
     """
-    This class is a composition of ConversionItem and handles saving, clearing and loading the
+    This class is a composition of ConversionItem for saving, clearing and loading the
     currency conversion history in JSON file.
 
     Attributes:
