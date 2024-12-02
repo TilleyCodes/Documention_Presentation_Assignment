@@ -1,10 +1,9 @@
-# pylint: disable=missing-docstring
+# pylint: disable=missing-module-docstring
 # pylint: disable=line-too-long
 
 from colored import Fore, Style
 from classes.conversion_item import ConversionItem
 
-# This function is testing the conversion_item JSON dictionary
 def test_conversion_item_json():
     """
     Tests the json_dict() method of the ConversionItem class.
@@ -20,7 +19,6 @@ def test_conversion_item_json():
     assert diction["rate"] == 0.5000
     assert diction["description"] == "Testing"
 
-#This function is testing the conversion_item string message is as working
 def test_conversion_item_str():
     """
     Tests the string representation (__str__) of the ConversionItem class.

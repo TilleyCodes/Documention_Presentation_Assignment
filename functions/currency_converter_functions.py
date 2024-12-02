@@ -1,6 +1,7 @@
 # pylint: disable=missing-docstring
 # pylint: disable=line-too-long
 
+# Imported from <link> for the purpose of .......
 from colored import Fore, Style
 from currency_codes import get_fiat_currencies
 from tabulate import tabulate
@@ -46,8 +47,6 @@ def convert_with_live_rate(conversion_history):
 
 def convert_with_personal_rate():
     """
-    Converts a currency value using a user-provided exchange rate.
-
     This function prompts the user for an FX rate, a value to convert, and whether to 
     convert to or from the base currency. Displays the converted result.
     """
@@ -68,13 +67,10 @@ def convert_with_personal_rate():
         converted_amount = converter.convert(currency_value)
         print(f"\n{Fore.white}The value{Style.reset} {Fore.blue}{currency_value:.2f}{Style.reset} {Fore.white}in your local currency with FX rate{Style.reset} {Fore.cyan}{personal_rate:.5f}{Style.reset} {Fore.white}is{Fore.white} {Fore.blue}{converted_amount:.2f}{Style.reset} {Fore.white}in foreign currency.{Style.reset}\n")
 
-# This function calculates to FX rate by dividing the from_value input by the to_value input
 def calculate_fx_rate():
     """
-    Calculates and displays the FX rate based on user input values.
-
-    Prompts the user to input the "from" and "to" values. Calculates the 
-    exchange rate and displays the result.
+    This function prompts the user to input the "from" and "to" values. Calculates the 
+    FX rate and displays the result.
     """
     from_value = get_numerical_input(f"{Fore.white}Please enter the from value to calculate the FX rate:{Fore.white} ")
     if from_value is None:
@@ -102,7 +98,7 @@ def get_currency_codes():
 
 def print_currency_codes():
     """
-    This function displays a sorted list of currency names and codes in a table format.
+    This function displays a sorted list of currency names and codes in a formated table using Tabulate package.
     """
     currency_codes = get_currency_codes()
     currency_codes.sort()
@@ -111,28 +107,29 @@ def print_currency_codes():
 
 def print_conversion_history(conversion_history):
     """
-    Displays the user's conversion history.
+    This function displays the user's conversion history.
 
     Args:
-        conversion_history (ConversionHistory): A class managing saved conversions.
+        conversion_history (ConversionHistory): Manages saved conversion history.
     """
     conversion_items = conversion_history.load_history()
     for item in conversion_items:
         print(item)
 
-# Helper Functions to make code DRY:
+#
+# Helper Functions to make code DRY
+#
 
 def get_numerical_input(message):
     """
-    Prompts the user for a valid non-zero numerical input.
-
-    Displays error messages for invalid or zero values and allows up to three attempts.
-
-    Returns:
-        float or None: The valid numerical input as a float, or None if the attempts fail.
+    This function prompts the user for a valid non-zero numerical input.
+    Displays error messages for invalid or zero values and allows 3 attempts.
 
     Args:
-        message (str): The prompt message to display to the user.    
+        message (str): The message to display to the user.
+
+    Returns:
+        float or None: The valid numerical input as a float, or None if the attempts fails 3 times.    
     """
     error_message_numerical = f"{Fore.white}Please enter a{Style.reset} {Fore.red}numerical{Style.reset} {Fore.white}value: {Style.reset}"
     error_message_zero = f"\n{Fore.white}Please enter a{Style.reset} {Fore.red}non-zero{Style.reset} {Fore.white}value: {Style.reset}"
@@ -145,16 +142,15 @@ def get_numerical_input(message):
         tries += 1
     return float(value) if is_float(value) and float(value) != 0 else None
 
-# This function checks the string to see if it can be converted to a number
 def is_float(input_str):
     """
-    Checks if a given string can be converted to a float.
-
-    Returns:
-        bool: True if the string can be converted to a float, False otherwise.
+    Checks if a string can be converted to a float.
 
     Args:
         input_str (str): The string to check.
+
+    Returns:
+        bool: True if the string can be converted to a float, False otherwise.
     """
     try:
         float(input_str)

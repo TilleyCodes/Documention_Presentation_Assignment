@@ -1,6 +1,5 @@
 # pylint: disable=missing-docstring
 
-# This class calcutors the conversion using rate and amount
 class CurrencyConverter:
     """
     Purpose:

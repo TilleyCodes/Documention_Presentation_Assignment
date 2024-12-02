@@ -35,6 +35,7 @@ class CurrencyConverterLiveRate(CurrencyConverter):
         """
         super().__init__(rate=1)
         return
+
     def convert_currency(self, from_currency, to_currency, amount):
         """
         Converts an amount using live exchange rates.

@@ -3,7 +3,6 @@
 from classes.conversion_item import ConversionItem
 from classes.conversion_history import ConversionHistory
 
-# This function is testing the write json file to save conversion
 def test_save_conversion():
     """
     Tests saving and loading a conversion item using ConversionHistory.
@@ -12,13 +11,10 @@ def test_save_conversion():
     cleared before the test, and the saved item matches the original.
     """
     conversion_item = ConversionItem("AUD", "USD", 200, 0.5000, "Testing")
-    # Using test json file
     conversion_history = ConversionHistory("tests/test_conversion_history.json")
 
-    # clears the json file
+    # Clear the json file and save the conversion item
     conversion_history.clear()
-
-    # Save the conversion item
     conversion_history.save_conversion(conversion_item)
 
     # Load and verify the saved items

@@ -16,11 +16,12 @@ class ConversionItem:
     
         Methods:
         json_dict():
-            Returns the conversion data as a dictionary for JSON.
+            Returns the conversion data as a JSON dictionary.
 
         __str__():
             Returns a f-string of the conversion details.
     """
+
     def __init__(self, from_currency, to_currency, amount, rate, description):
         self.from_currency = from_currency
         self.to_currency = to_currency
@@ -30,7 +31,7 @@ class ConversionItem:
 
     def json_dict(self):
         """
-        This function converts the ConversionItem data for JSON.
+        This function converts the ConversionItem data to JSON.
         """
         return {
             "from_currency": self.from_currency,

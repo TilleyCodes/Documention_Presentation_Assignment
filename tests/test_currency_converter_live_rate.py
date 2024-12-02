@@ -1,4 +1,4 @@
-# pylint: disable=missing-docstring
+# pylint: disable=missing-module-docstring
 # pylint: disable=trailing-whitespace
 
 from classes.currency_converter_live_rate import CurrencyConverterLiveRate

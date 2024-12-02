@@ -2,7 +2,6 @@
 
 from classes.currency_converter import CurrencyConverter
 
-#This function is testing the conversion
 def test_convert():
     """
     Tests the convert method of the CurrencyConverter class.

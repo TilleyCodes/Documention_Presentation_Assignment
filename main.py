@@ -1,11 +1,21 @@
-# pylint: disable=missing-docstring
 # pylint: disable=line-too-long
 # pylint: disable=invalid-name
 
-from colored import Fore, Back, Style
+"""This is the main file to run the application."""
 
+# Imported colored for text formating
+# Source: https://pypi.org/project/colored/
+# Purpose: To style the text terminal output in different colours and background
+from colored import Fore, Back, Style
+# Imported ConventionHistory class
+# Source: local module - classes/conversion_history.py
+# Purpose: To save, retrieve and clear conversion history in a JOSN file
 from classes.conversion_history import ConversionHistory
-from functions.currency_converter_functions import print_currency_codes, calculate_fx_rate, convert_with_personal_rate, convert_with_live_rate, print_conversion_history
+# Imported ConventionHistory class
+# Source: local module - classes/conversion_history.py
+# Purpose: To save, retrieve and clear conversion history in a JOSN file
+from functions.currency_converter_functions import (print_currency_codes, calculate_fx_rate,
+convert_with_personal_rate, convert_with_live_rate, print_conversion_history)
 
 print(f"\n{Fore.white}{Back.blue}Welcome to the Currency Converter Application!{Style.reset}\n")
 print(f"{Fore.white}Please select from the options below.")
