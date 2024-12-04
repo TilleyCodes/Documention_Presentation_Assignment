@@ -1,4 +1,4 @@
-"""This class module converts the currencies using a given exchaneg rate"""
+"""This class module converts the currencies using a given exchange rate"""
 
 class CurrencyConverter:
     """

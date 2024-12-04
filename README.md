@@ -74,10 +74,9 @@ Please use the links under installation for steps to install.
 ### Installation
 
 1. Please ensure to downlod the latest [Python3](https://realpython.com/installing-python/)
-2. Install [Terminal for Windows](https://medium.com/@bonguides25/how-to-install-and-update-windows-terminal-in-windows-10-11-b85361b1aa07#:~:text=The%20first%20and%20easiest%20way,minutes%20to%20download%20and%20install.), or
-3. Set up for [Terminal for Mac](https://medium.com/@latusikl/the-ultimate-setup-for-macos-terminal-7fd340f58366)
-4. Optional download [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-5. **Virtual Environment Set Up:** The dependant packages are listed below and are installed through the terminal virtual environment for dependancy isolation and python system protection.  
+2. Install [Terminal for Windows](https://medium.com/@bonguides25/how-to-install-and-update-windows-terminal-in-windows-10-11-b85361b1aa07#:~:text=The%20first%20and%20easiest%20way,minutes%20to%20download%20and%20install.), or [Terminal for Mac](https://medium.com/@latusikl/the-ultimate-setup-for-macos-terminal-7fd340f58366)
+3. Optional download: [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) is another terminal that can be used to run the applciation
+4. **Virtual Environment Set Up:** The dependant packages are listed below and are installed through the terminal virtual environment for dependancy isolation and python system protection.  
     Follow these steps in terminal **before** installing the dependant packages:  
     i. enter virtual environment 
 ```bash
