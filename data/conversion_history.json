@@ -1,0 +1,31 @@
+[
+    {
+        "from_currency": "AUD",
+        "to_currency": "EUR",
+        "amount": 150.0,
+        "rate": 0.609251,
+        "description": "Eurotrip"
+    },
+    {
+        "from_currency": "AUD",
+        "to_currency": "USD",
+        "amount": 200.0,
+        "rate": 0.6808,
+        "description": "USA trip"
+    },
+    {
+        "from_currency": "AUD",
+        "to_currency": "USD",
+        "amount": 300.0,
+        "rate": 0.6808,
+        "description": "my trip"
+    },
+    {
+        "from_currency": "AUD",
+        "to_currency": "USD",
+        "amount": 200.0,
+        "rate": 0.6808,
+        "description": "trip"
+    }
+ 
+]

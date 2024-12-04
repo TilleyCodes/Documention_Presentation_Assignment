@@ -83,6 +83,6 @@ class ConversionHistory():
                 )
                 items.append(item)
             return items
-        except (FileNotFoundError, PermissionError, OSError):
+        except (FileNotFoundError, PermissionError, OSError, json.decoder.JSONDecodeError):
             return []
         
