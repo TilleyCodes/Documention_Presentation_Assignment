@@ -76,7 +76,11 @@ Please use the links under installation for steps to install.
 1. Please ensure to downlod the latest [Python3](https://realpython.com/installing-python/)
 2. Install [Terminal for Windows](https://medium.com/@bonguides25/how-to-install-and-update-windows-terminal-in-windows-10-11-b85361b1aa07#:~:text=The%20first%20and%20easiest%20way,minutes%20to%20download%20and%20install.), or [Terminal for Mac](https://medium.com/@latusikl/the-ultimate-setup-for-macos-terminal-7fd340f58366)
 3. Optional download: [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) is another terminal that can be used to run the applciation
-4. **Virtual Environment Set Up:** The dependant packages are listed below and are installed through the terminal virtual environment for dependancy isolation and python system protection.  
+4. Clone from repository to local machine with the following command in terminal:
+```bash
+git clone https://github.com/TilleyCodes/Documention_Presentation_Assignment
+```
+5. **Virtual Environment Set Up:** Dependant packages are installed through the terminal virtual environment for dependancy isolation and system python protection.  
     Follow these steps in terminal **before** installing the dependant packages:  
     i. enter virtual environment 
 ```bash
@@ -96,7 +100,11 @@ source .venv/bin/activate
 ```bash
 deactivate
 ```  
-- this will exit out of the virtual environment  
+- this will exit out of the virtual environment 
+6. Install the depandent packages as listed in requirements.txt with the below command, or you may install separately with the commands under dependencies and licenses
+```bash
+pip install -r requirements.txt
+``` 
 
 ---
 
@@ -190,18 +198,18 @@ Simply enter the number corresponding to your selection.
 
 - ```Enter 1 to convert currencies using live FX rate.```
     - ```Please enter the amount you wish to convert:``` *This needs to be a numerical value.*
-    - ```Please enter the currency code you wish to convert from:``` *The currency code is a 3 letter code representing the currency of choice (if unsure you can view the currency code by entering 4 in the main menu).*
-    - ```Please enter the currency code you wish to convert to:``` *The currency code is a 3 letter code representing the currency of choice (if unsure you can view the currency code by entering 4 in the main menu).*
+    - ```Please enter the currency code you wish to convert from:``` *The currency code is a 3 letter code representing the currency of choice, you are allowed 3 attempts to enter the correct currency code (if unsure you can view the currency code by entering 4 in the main menu).*
+    - ```Please enter the currency code you wish to convert to:``` *The currency code is a 3 letter code representing the currency of choice you are allowed 3 attempts to enter the correct currency code (if unsure you can view the currency code by entering 4 in the main menu).*
     - ```Enter a short description to save a history or enter to exit:``` *If you want to save a history of this conversion, enter a short description otherwise enter with no description will not save.*
     
 - ```Enter 2 to convert currencies using your personalised FX rate.```
-    - ```Please enter the FX rate you received during your exchange:``` *This is the FX rate given when you the the exchange.*
-    - ```Please enter the value you wish to convert:``` *This is the monetary value.*
+    - ```Please enter the FX rate you received during your exchange:``` *This is the FX rate given when you the the exchange. You are allowed 3 attempts to enter the a numerical value and cannot be zero*
+    - ```Please enter the value you wish to convert:``` *This is the monetary value. You are allowed 3 attempts to enter the a numerical value and cannot be zero*
     - ```Do you want this value "x" converted to your base currency? Enter Y or N:``` *to assist with the calculation, enter Y if this is to be converted back to your base currency, (if the value you had input in the above line is the foreign value) otherwise enter N.*
 
 - ```Enter 3 to calculate the FX rate.```
-    - ```Please enter the from value to calculate the FX rate:``` *This is the base monetary value.*
-    - ```Please enter the to value to calculate the FX rate:``` *This is the foreign monetary value.*
+    - ```Please enter the from value to calculate the FX rate:``` *This is the base monetary value. You are allowed 3 attempts to enter the a numerical value and cannot be zero*
+    - ```Please enter the to value to calculate the FX rate:``` *This is the foreign monetary value. You are allowed 3 attempts to enter the a numerical value and cannot be zero*
 
 - ```Enter 4 to view the currency code list.```
     - *By entering 4, the Currency Code table will automatically populate.*
