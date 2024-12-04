@@ -2,82 +2,145 @@
 
 ## Table Of Contents
 
-1. [Overview](#overview)
+1. [Overview and Purpose](#overview-and-purpose)
 2. [Features and Functions](#features-and-functions)
-3. [Set Up](#set-up)
-4. [Application Help](<#application help>)
-5. [References](#references)
+3. [User Stories](#user-stories)
+4. [Set Up](#set-up)
+5. [Application Help](<#application help>)
+6. [References](#references)
 
-## Overview
+---
+
+## Overview and Purpose
 
 This terminal command-line interface (CLI) application is a Currency Converter that helps users to convert the currency or currencies of their choice.
-This is an ideal application for users travelling overseas or sending money overseas as this app allows the user to convert the value of money using the live exchange rate or the actual FX (Foreign Exchange) rate they received when they exchanged money (as often the received rate is generally lower than the live rate due to fees and commissions).
+This is an ideal application for users travelling overseas or sending money overseas as this app allows the user to convert the value of money using the live exchange rate or the actual FX (Foreign Exchange) rate they received when they exchanged money (as often the received rate is generally lower than the live rate due to fees and commissions).  
+
+---
 
 ## Features and Functions
-- Convert currencies using the live FX rate
+
+- Convert currencies using the live FX rate.
     - The app will take the user's selections of base currency to convert to selected foriegn currency using the live FX rate.
-- Convert currencies using an actual FX rate
-    - The user can input an FX rate and a value amount and the app will output the converted amount either to base currency or foreign currency based on the user's selection - this way the user can track how much they are spending in base currency. 
+- Convert currencies using an actual FX rate.
+    - The user can input an FX rate and a value amount and the app will output the converted amount either to base currency or foreign currency based on the user's selection - this way the user can track how much they are spending in base currency
     (eg. when the user goes overseas and exchanges money, the rate may be worse than the market rate).
-    - Similarly this function can be used when sending money overseas 
-    (eg. you want to send the value of 100 in foreign currency but don't know how much that is in your base currency).
-- Calculate the actual FX rate
-    - The user can input the base currency value and the foreign currency value and the app will calculate the FX rate.
-- Save live FX rate conversions to a file
+    - Similarly this function can be used when sending money overseas
+    (eg. you want to send the value of 100 in foreign currency but don't know how much that is in your base currency). 
+- Calculate the actual FX rate.
+    - The user can input the base currency value and the foreign currency value and the app will calculate the FX rate.  
+- Save live FX rate conversions to a file.
     - The user can choose to save the conversion for their own record.
-- View conversion history
+- View conversion history.
     - The user can view their saved conversions.
+
+---
+
+## User Stories
+
+- As a user, I want to be able to convert currencies using the live exchange rate.  
+    - For example, if I plan to travel to the US I want to know how much my AUD is currently worth base on the live exchange rate.
+- As a user, I want an app that can convert my selected currency using my provided FX rate.
+    - For example, when I am overseas and have already converted my currencies at a counter or from an ATM. Before buying a product like a 30 Euro T-shirt, I want to use the exchange rate I recevied to convert back to my base currency so I know how much the 30 Euro T-shirt is worth in AUD. 
+- As a user, I want an app that can calculate the FX rate using the base and foriegn currency.
+    - For example, I want to make an online purchase for an item at 10 USD but I'm only prepared to spend maximum 15 AUD. I would put these values into the app to calculate the FX rate so I can keep my eye out for when the rate is close to my limit to make the purchase.
+- As a user, want to be able to save and review my conversions for my record and delete when I want
+    - For example, when I'm at the exchange counter I want to review my conversions and compare the rates. This will make it easier when I'm excahnging multiple currencies at the same time.
+
+---
 
 ## System Requirements
 
-System requirements are either macOS, Windows or Linux (with Python3 installed).
-Any modern laptop or destop computer should suffice.
+- Operating System: 
+    - macOS, Windows or Linux
+- RAM:
+    - minimum 1-2 GB
+- Storage:
+    - minimum 2-4 GB free space
+- CPU:
+    - 1 GHz single core processor or 2 GHz dual-core processer or better (recommended)
+- Python
+    - version 3.7 or higher 
+
+---
 
 ## Set Up
 
 This application is run in terminal CLI and requires the latest python3 version installed.  
-Please use the links under installation for step to install.
+Please use the links under installation for steps to install.
+
+---
 
 ### Installation
 
-1. [Python3](https://realpython.com/installing-python/)
-2. [Terminal for Windows](https://medium.com/@bonguides25/how-to-install-and-update-windows-terminal-in-windows-10-11-b85361b1aa07#:~:text=The%20first%20and%20easiest%20way,minutes%20to%20download%20and%20install.)
-3. [Terminal for Mac](https://medium.com/@latusikl/the-ultimate-setup-for-macos-terminal-7fd340f58366)
-4. [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-5. The dependant packages are listed below and are installed through the terminal virtual environment.
-    To enter into the virtual environment, follow these steps in terminal before installing the dependant packages:  
-    i. input: ```python3 -m venv .venv```   
-        - once the the program has run you will see a folder name .venv  
-    ii. input: ```source .venv/bin/activate```  
-        - this will activate to virtual environment. You can then run the pip install command for the corresponding packages per below.   
-    iii. input: ```deactivate```  
-        - this will exit out of the virtual environment  
+1. Please ensure to downlod the latest [Python3](https://realpython.com/installing-python/)
+2. Install [Terminal for Windows](https://medium.com/@bonguides25/how-to-install-and-update-windows-terminal-in-windows-10-11-b85361b1aa07#:~:text=The%20first%20and%20easiest%20way,minutes%20to%20download%20and%20install.), or
+3. Set up for [Terminal for Mac](https://medium.com/@latusikl/the-ultimate-setup-for-macos-terminal-7fd340f58366)
+4. Optional download [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+5. **Virtual Environment Set Up:** The dependant packages are listed below and are installed through the terminal virtual environment for dependancy isolation and python system protection.  
+    Follow these steps in terminal **before** installing the dependant packages:  
+    i. enter virtual environment 
+```bash
+python -m venv env
+```  
+- once the the program has run you will see a folder name .venv
+    iia. activate environment for macOS/Linux 
+```bash
+source .venv/bin/activate
+```  
+    iib. activate environment for windows input:
+ ```bash
+  .\env\Scripts\activate
+  ```
+- this will activate virtual environment. You can then run the pip install command for the corresponding packages per below.   
+    iii. deactivate virtual environment
+```bash
+deactivate
+```  
+- this will exit out of the virtual environment  
+
+---
 
 ### Dependencies and Licenses
 
 The application is dependant on the following packages. Once you have entered into virtual environment (steps provided under Installation), run the pip install command per below to install the packages. 
 List of required packages are under requirements.txt file.  
 
-- colored==2.2.4 - this package is used to style the text in different colours
+- colored==2.2.4 - This package provides a library of 256 colours for formatting coloured text within Python projects
     - license: MIT License
     - copyright 2014 - 2023 Dimitris Zlatanidis
-    - ```pip install colored```
-- currency-codes==23.6.4 - this package provides a list of all currency codes
+- for installation:
+```bash
+    pip install colored
+```
+- to import with Python:
+```bash
+from colored import Fore, Back, Style
+```
+- currency-codes==23.6.4 - This package is a comprehensive package for managing currency codes across different types of assets, simplifying the development process for applications involving multiple types of currencies. For the purpose of this application only the fiat currency codes are used.
     - license: GNU General Public License v3.0
     - copywrite 2007 free sottware foundation
-    - ```pip install currency-codes```
-- tabulate==0.9.0 - this package is used to format the currency codes list
+```bash
+pip install currency-codes
+```
+- tabulate==0.9.0 - This relatively simple package formats data and and outputs it within small tables in a readable presentation of both text and numerical data.
     - license: MIT License (MIT)
     - copywrite 2011 - 2020 Sergey Astanin
-    - ```pip install tabulate```
-- pytest==8.3.3 - this package is used to run test code
+```bash
+pip install tabulate
+```
+- pytest==8.3.3 - This package creates a framework allowing the user to test small sequences of code using the "assert" statement.
     - license: MIT License (MIT)
     - copywrite 2004 Holger krekel and others
-    - ```pip install pytest```
-- python-dotenv==1.0.1 - this package is used to to store sensitive data, for this app it is the API Key
+```bash
+pip install pytest
+```
+- python-dotenv==1.0.1 - This package allows users to store key-value pairs from a ".env" file and sets them as environmental variables, allowing the storage of sensitive data that can be excluded from deployment to the public.
     - license: BSD License (BSD-3-Clause)
     - copywrite 2014 Saurabh Kumar (python-dotenv), 2013 Ted Tieken (django-dotenv-rw), 2013 Jacob Kaplan-Moss (django-dotenv)
-    - ```pip install python-dotenv```
+```bash
+pip install python-dotenv
+```
 - http://api.exchangeratesapi.io/v1/convert - license: Master Software as a Service Subscription Agreement (SaaS) 
     - the API key is used to extract live FX rates
     - the exchangerates API Key code is stored in .env for privacy protection
@@ -86,15 +149,15 @@ List of required packages are under requirements.txt file.
 
 #### MIT License 
 
-Grants users the freedom to use, modify and distribute the software with no legal barriers for personal and commerical purposes.
+The MIT license is a simple and permissive software license widely used by developers for its brevity and use, modification and distribution with very limited legal barriers for both commercial and personal use. As one of the most simplistic and permissive licenses used, the MIT License includes some significant ethical risks when releasing code for use by others, being its lack of warranty and liability, meaning users are able to use your code for whatever purposes or projects they choose to, with little to no constraints or limitations on your end and no legal repercussions if used in unethical practices.
 
 #### GNU General Public License v3.0
 
-Grants users the freedom and right to use. Any modified work must be licensed under General Public License and shared to ensure the software remains free to use. 
+The GNU General Public License v3.0 is a popular software license that lives within a group named the GNU General Public Licenses, that ensures users the freedom to use, share, and modify all software using their license. Being a widely used and ensuring the freedom of use under its licensing it shares similar ethical risks as the MIT License does, being that all code released under the General Public License are able to be used by any other users for any purposes or projects.
 
 #### BSD License (BSD-3-Clause)
 
-Grants users the freedom to use, modify and distribute the software with minimal restrictions on redistribution.
+The BSD License is another popular open source software license offering developers a flexible and permissive framework for software distribution with minimal restrictions and limitations on how software can be used, modified or redistributed. With the freedom that comes from minimal constraints it also shares the same ethical risks as other popular free software licenses, with very limited actions that can be taken if users decide to use your source code for unethical practices.
 
 ## Application Help
 
@@ -102,9 +165,21 @@ Open the terminal and run the application.
 (Ensure the set-up and installation steps have been completed).  
 
 - Check python version by inputing in command line.  
-```python --version``` or ```python3 --version```  
+```bash
+python --version
+``` 
+or 
+```bash
+python3 --version
+```  
 - To run the application, depending on your system and set-up, you may use <u>python</u> or <u>python3</u> and the file name. In this case main.py  
-```python main.py``` or ```python3 main.py```  
+```bash
+python main.py
+``` 
+or 
+```bash
+python3 main.py
+```  
 
 You will see a welcome message and a list of selections below.
 
