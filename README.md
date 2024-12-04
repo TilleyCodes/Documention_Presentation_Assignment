@@ -145,6 +145,8 @@ pip install python-dotenv
     - the API key is used to extract live FX rates
     - the exchangerates API Key code is stored in .env for privacy protection
 
+---
+
 ### Ethical Impact of the Licenses
 
 #### MIT License 
@@ -158,6 +160,8 @@ The GNU General Public License v3.0 is a popular software license that lives wit
 #### BSD License (BSD-3-Clause)
 
 The BSD License is another popular open source software license offering developers a flexible and permissive framework for software distribution with minimal restrictions and limitations on how software can be used, modified or redistributed. With the freedom that comes from minimal constraints it also shares the same ethical risks as other popular free software licenses, with very limited actions that can be taken if users decide to use your source code for unethical practices.
+
+---
 
 ## Application Help
 
@@ -208,6 +212,8 @@ Simply enter the number corresponding to your selection.
 
 - ```Enter 6 to exit.```
     - *By entering 6, you will exit the application and a farewell message will appear.*
+
+---
 
 ## References
 
