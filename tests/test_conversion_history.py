@@ -15,8 +15,17 @@ def test_save_conversion():
     """
     Tests saving and loading a conversion item using ConversionHistory.
 
-    Ensures that a conversion item is saved to the history, the history is 
+    Ensures a conversion item is saved to the history, the history is 
     cleared before the test, and the saved item matches the original.
+
+    Example:
+        conversion_item = ConversionItem("AUD", "USD", 200, 0.5000, "Testing")
+        conversion_history = ConversionHistory("tests/test_conversion_history.json")
+        conversion_history.clear()
+        conversion_history.save_conversion(conversion_item)
+        saved_items = conversion_history.load_history()
+        assert len(saved_items) == 1
+        assert saved_items[0].description == "Testing"
     """
     conversion_item = ConversionItem("AUD", "USD", 200, 0.5000, "Testing")
     conversion_history = ConversionHistory("tests/test_conversion_history.json")

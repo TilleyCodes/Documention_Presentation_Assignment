@@ -6,6 +6,14 @@
 - Calculating foreign exchange rates
 - Displaying currency codes in a formatted table
 - Managing and displaying conversion history
+
+Examples:
+    Perform a live currency conversion:
+        conversion_history = ConversionHistory("history.json")
+        convert_with_live_rate(conversion_history)
+    
+    Display available currency codes:
+        print_currency_codes()
 """
 
 # Importing colored for text formating
@@ -43,8 +51,22 @@ def convert_with_live_rate(conversion_history):
     the conversion with an optional description to the conversion history.
 
     Args:
-        conversion_history (ConversionHistory): An class that stores and manages
-                                                the user's past conversions.
+        conversion_history: A class that stores and manages the user's past conversions.
+
+    Examples:
+        conversion_history = ConversionHistory("history.json")
+        convert_with_live_rate(conversion_history)
+        amount = get_numerical_input()
+            Please enter the amount you wish to convert: 100
+        from_currency = input()
+            Please enter the 3-letter currency code you wish to convert from: USD
+        to_currency = input()
+            Please enter the 3-letter currency code you wish to convert to: EUR
+        (converted_amount, rate) = conversion_result
+            Converting 100.00 USD to 85.00 EUR at rate 0.85.
+        description = input()
+            Enter a short description to save to history or enter to return to the main menue.
+        conversion_history.save_conversion(conversion_item) # saves to history
     """
 
     amount = get_numerical_input(f"{Fore.white}Please enter the amount you wish to convert: {Style.reset}")
@@ -71,8 +93,23 @@ def convert_with_live_rate(conversion_history):
 
 def convert_with_personal_rate():
     """
+    Converts currency using the user given exchange rate.
+
     This function prompts the user for an FX rate, a value to convert, and whether to 
     convert to or from the base currency. Displays the converted result.
+
+    Examples:
+        convert_with_personal_rate()
+        personal_rate = get_numerical_input()
+            Please enter the FX rate: 0.85
+        currency_value = get_numerical_input()
+            Please enter the value to convert: 100
+        user_selection = input()
+            Do you want this value converted to your base currency? Enter Y or N: Y
+        converter = CurrencyConverter(rate = personal_rate)
+        converted_amount = converter.convert(currency_value)
+        print()
+        The value 100.00 with an FX rate of 0.85 is 85.00 in your base currency.
     """
     personal_rate = get_numerical_input(f"{Fore.white}Please enter the FX rate you received during your exchange: {Style.reset}")
     if personal_rate is None:
@@ -93,8 +130,20 @@ def convert_with_personal_rate():
 
 def calculate_fx_rate():
     """
+    Calculates the foreign exchange rate based on the user input.
+
     This function prompts the user to input the "from" and "to" values. Calculates the 
     FX rate and displays the result.
+
+    Examples:
+        calculate_fx_rate()
+        from_value = get_numerical_input()
+            Please enter the from value: 120
+        to_value = get_numerical_input()
+            Please enter the to value: 100
+        fx_rate = 1/(from_value/to_value)
+        print()
+            The FX rate is 0.83333 from value 120 to value 100.
     """
     from_value = get_numerical_input(f"{Fore.white}Please enter the from value to calculate the FX rate:{Fore.white} ")
     if from_value is None:
@@ -111,7 +160,15 @@ def get_currency_codes():
     Retrieves a list of currency names and codes.
 
     Returns:
-        list: A list of [name, code] pairs for each currency.
+        A list of [name, code] pairs for each currency.
+
+    Example:
+        return currency_codes
+            Name                    Code
+            ------------            ----
+            US Dollar               USD
+            Australian Dollar       AUD
+            Euro                    EUR   
     """
     currency_codes = []
     for currency in get_fiat_currencies():
@@ -123,6 +180,14 @@ def get_currency_codes():
 def print_currency_codes():
     """
     This function displays a sorted list of currency names and codes in a formated table using Tabulate package.
+
+    Example:
+        print_currency_code()
+            Name                    Code
+            ------------            ----
+            Australian Dollar       AUD
+            Euro                    EUR
+            US Dollar               USD
     """
     currency_codes = get_currency_codes()
     currency_codes.sort()
@@ -134,7 +199,7 @@ def print_conversion_history(conversion_history):
     This function displays the user's conversion history.
 
     Args:
-        conversion_history (ConversionHistory): Manages saved conversion history.
+        conversion_history: Manages saved conversion history.
     """
     conversion_items = conversion_history.load_history()
     for item in conversion_items:
@@ -150,10 +215,18 @@ def get_numerical_input(message):
     Displays error messages for invalid or zero values and allows 3 attempts.
 
     Args:
-        message (str): The message to display to the user.
+        message: The message to display to the user.
 
     Returns:
-        float or None: The valid numerical input as a float, or None if the attempts fails 3 times.    
+        The valid numerical input as a float, or None if the attempts fails 3 times.
+
+    Examples:
+        def get_numerical_input("Enter a value: ")
+            Enter a value: abc
+        error_message_numerical = "message"
+            Please enter a numerical value: 0
+        error_message_zero = "message"
+            Please enter a non-zero value: 100
     """
     error_message_numerical = f"{Fore.white}Please enter a{Style.reset} {Fore.red}numerical{Style.reset} {Fore.white}value: {Style.reset}"
     error_message_zero = f"\n{Fore.white}Please enter a{Style.reset} {Fore.red}non-zero{Style.reset} {Fore.white}value: {Style.reset}"
@@ -171,10 +244,18 @@ def is_float(input_str):
     Checks if a string can be converted to a float.
 
     Args:
-        input_str (str): The string to check.
+        input_str: The string to check.
 
     Returns:
-        bool: True if the string can be converted to a float, False otherwise.
+        True if the string can be converted to a float, False otherwise.
+
+    Examples:
+        is_float("123.45")
+            True
+        is_float("abc")
+            False
+        is_float("")
+            False
     """
     try:
         float(input_str)

@@ -11,11 +11,16 @@ def test_convert():
     """
     Tests the convert method of the CurrencyConverter class.
 
-    Ensures that the convert method correctly calculates the converted amount 
+    Ensures the convert method correctly calculates the converted amount 
     based on the provided exchange rate.
 
     Asserts:
         The converted amount matches the expected value.
+
+    Example:
+        conversion_rate = CurrencyConverter(0.5000)
+        result = conversion_rate.convert(200)
+        assert result == 100.0
     """
     conversion_rate = CurrencyConverter(0.5000)
     converting_amount = conversion_rate.convert(200)

@@ -17,7 +17,7 @@ class ConversionHistory():
     currency conversion history in JSON file.
 
     Attributes:
-        file (str): Path to the JSON file for storing history.
+        file: Path to the JSON file for storing history.
 
     Methods:
         __init__(file):
@@ -31,8 +31,25 @@ class ConversionHistory():
 
         load_history():
             Loads saved conversions as a list of ConversionItem objects.
+
+    Examples:
+        history = ConversionHistory("history.json")
+        conversion = ConversionItem("USD", "EUR", 100, 0.85, "Travel Expense")
+        history.save_conversion(conversion)
+        history.load_history()
+        [ConversionItem("USD", "EUR", 100, 0.85, "Travel Expense")]
     """
     def __init__(self, file):
+        """
+        Initialises the ConversionHistory with a specified file path.
+
+        Args:
+            file: Path to the JSON file.
+
+        Example:
+            history = ConversionHistory("history.json")
+            print(history.file)  # Output: 'history.json'
+        """
         self.file = file
 
     def save_conversion(self, conversion_item):
@@ -40,7 +57,12 @@ class ConversionHistory():
         Saves a conversion item to the history file.
 
         Args:
-            conversion_item (ConversionItem): The conversion to save.
+            conversion_item: The conversion to save.
+
+        Example:
+            history = ConversionHistory("history.json")
+            conversion = ConversionItem("USD", "EUR", 100, 0.85, "DEC holiday")
+            history.save_conversion(conversion)
         """
         conversion_history = self.load_history()
         conversion_history.append(conversion_item)
@@ -56,6 +78,10 @@ class ConversionHistory():
     def clear(self):
         """
         Clears all data from the history file.
+
+        Example:
+            history = ConversionHistory("history.json")
+            history.clear()  # Clears the contents of the file.
         """
         with open(self.file, "w", encoding="utf-8") as json_file:
             json.dump([], json_file, indent=4)
@@ -66,7 +92,11 @@ class ConversionHistory():
         Loads conversion history from the file.
 
         Returns:
-            list[ConversionItem]: List of saved conversions, or an empty list if the file is missing or inaccessible.
+            list[ConversionItem]: List of saved conversions, or an empty list if the file is missing.
+        
+        Example:
+            history = ConversionHistory("history.json")
+            history.load_history()  # Returns saved conversions as ConversionItem objects.
         """
         try:
             with open(self.file, "r", encoding="utf-8") as json_file:

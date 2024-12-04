@@ -29,7 +29,7 @@ API_KEY = os.getenv("EXCHANGERATES_API_KEY")
 
 class CurrencyConverterLiveRate(CurrencyConverter):
     """
-    Inherits from CurrencyConverter.
+    This class Inherits from CurrencyConverter.
 
     Purpose:
         This class performs currency conversions using live exchange rates retrieved from an API.
@@ -43,11 +43,20 @@ class CurrencyConverterLiveRate(CurrencyConverter):
 
         get_live_rate(base_currency, currency, api_key):
             Gets the live exchange rate for from and to currencies.
+
+    Examples:
+        converter = CurrencyConverterLiveRate()
+        converted, rate = converter.convert_currency("USD", "EUR", 100)
+        print(f"Converted: {converted}, Rate: {rate}")
     """
 
     def __init__(self):
         """
         Initialises the CurrencyConverterLiveRate class with a default rate of 1.
+    
+        Example:
+            converter = CurrencyConverterLiveRate()
+            print(converter.rate)  # Output: 1
         """
         super().__init__(rate=1)
         return
@@ -57,12 +66,18 @@ class CurrencyConverterLiveRate(CurrencyConverter):
         Converts an amount using live exchange rates.
 
         Args:
-            from_currency (str): The currency code to convert from (e.g., "USD").
-            to_currency (str): The currency code to convert to (e.g., "AUD").
-            amount (float): The amount to be converted.
+            from_currency: The currency code to convert from (e.g., "USD").
+            to_currency: The currency code to convert to (e.g., "AUD").
+            amount: The amount to be converted.
 
         Returns:
-            tuple: Converted amount and rate, or None if the API key is missing or the rate can not retrieved.
+            Converted amount and rate, or None if the API key is missing or the rate can not retrieved.
+
+        Example:
+        converter = CurrencyConverterLiveRate()
+        converted, rate = converter.convert_currency("USD", "EUR", 100)
+        print(f"Converted: {converted}, Rate: {rate}")
+            Converted: 85.0, Rate: 0.85
         """
         if not API_KEY:
             print(f"{Fore.white}Exchange rates API key not found. Make sure it's in the .env file.{Style.reset}")
@@ -78,12 +93,17 @@ class CurrencyConverterLiveRate(CurrencyConverter):
         Gets the live exchange rate from the API.
 
         Args:
-            base_currency (str): Base currency code.
-            currency (str): Target currency code.
-            api_key (str): API key for authentication.
+            base_currency: Base currency code.
+            currency: Target currency code.
+            api_key: API key for authentication.
 
         Returns:
-            float or None: Exchange rate or None if the rate can not be retrieved.
+            Exchange rate or None if the rate can not be retrieved.
+
+        Example:
+            converter = CurrencyConverterLiveRate()
+            rate = converter.get_live_rate("USD", "EUR", "api_key_here")
+            print(rate)  # Output: 0.85
         """
         try:
             response = requests.get(f'https://api.exchangeratesapi.io/v1/latest?access_key={api_key}&base={base_currency}', timeout=10)

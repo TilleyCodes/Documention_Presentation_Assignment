@@ -7,7 +7,7 @@ class CurrencyConverter:
         the exchange rate.
 
     Attributes:
-        rate (float): The exchange rate used for conversion.
+        rate: The exchange rate used for conversion.
 
     Methods:
         __init__(rate):
@@ -15,6 +15,11 @@ class CurrencyConverter:
 
         convert(amount):
             Converts the given amount using the exchange rate.
+    
+    Example:
+        converter = CurrencyConverter(rate=0.85)  # Initialise with an exchange rate of 0.85
+        result = converter.convert(100)  # Convert value of 100  
+        print(result)  # Output: 85.0
     """
 
     def __init__(self, rate):
@@ -22,7 +27,11 @@ class CurrencyConverter:
         Initialises with the given exchange rate.
 
         Args:
-                rate (float): The exchange rate for the conversion.
+            rate: The exchange rate for the conversion.
+        
+        Example:
+            converter = CurrencyConverter(rate=0.85)
+            print(converter.rate)  # Output: 0.85
         """
         self.rate = rate
 
@@ -31,9 +40,14 @@ class CurrencyConverter:
         Converts the given amount using the exchange rate.
 
         Args:
-            amount (float): Amount to convert.
+            amount: Amount to convert.
 
         Returns:
-            float: Converted amount.
+            Converted amount.
+
+        Examples:
+            converter = CurrencyConverter(rate=0.85)
+            result = converter.convert(100)
+            print(result)  # Output: 85.0
         """
         return self.rate * amount
