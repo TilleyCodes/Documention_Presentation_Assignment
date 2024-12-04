@@ -168,6 +168,10 @@ The GNU General Public License v3.0 is a popular software license that lives wit
 
 The BSD License is another popular open source software license offering developers a flexible and permissive framework for software distribution with minimal restrictions and limitations on how software can be used, modified or redistributed. With the freedom that comes from minimal constraints it also shares the same ethical risks as other popular free software licenses, with very limited actions that can be taken if users decide to use your source code for unethical practices.
 
+#### api.exchangeratesapi.io
+
+Please visit  link to [Master Software as a Service Subscription Agreement (SaaS)](https://exchangeratesapi.io/agreement/)
+
 ---
 
 ## Application Help
