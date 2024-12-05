@@ -170,7 +170,7 @@ The BSD License is another popular open source software license offering develop
 
 #### api.exchangeratesapi.io
 
-Please visit  link to [Master Software as a Service Subscription Agreement (SaaS)](https://exchangeratesapi.io/agreement/)
+Please visit this link for [Master Software as a Service Subscription Agreement (SaaS)](https://exchangeratesapi.io/agreement/)
 
 ---
 
