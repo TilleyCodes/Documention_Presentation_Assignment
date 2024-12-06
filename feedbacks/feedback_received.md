@@ -37,7 +37,8 @@
 
 **My notes and plan of action based on feedback:**  
 - The paid API membership has expired since the application assignment. The free access has EUR as the base currency.  
-- If the currency code is inccorect an error message will notify the user and will allow 3 attempts.  
+- If the currency code is inccorect an error message will notify the user and will allow 3 attempts. 
+- Chris's feedback were simliar to other groups feedbacks which has been addressed.
 
 ![screenshot for currency code error](../screenshots/convert_with_live_rate.png)
 
