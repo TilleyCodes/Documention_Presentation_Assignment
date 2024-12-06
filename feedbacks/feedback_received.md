@@ -24,7 +24,7 @@
 ## Feedback 2  
 
 **Specific documentation checked:** Currency Converter Terminal CLI Application    
-**Feedback from:** Angus   
+**Feedback from:** Angus & Chris  
 **Date of feedback:** 04/12/2024     
 **Feedback Provided:**     
 - Readme - Installation instructions are very clear (great for none coding users!).    

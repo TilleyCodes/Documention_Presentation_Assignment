@@ -150,7 +150,7 @@ pip install python-dotenv
 ```
 - http://api.exchangeratesapi.io/v1/convert - license: Master Software as a Service Subscription Agreement (SaaS) 
     - the API key is used to extract live FX rates
-    - the exchangerates API Key code is stored in .env for privacy protection
+    - the exchangerates API Key code is stored in .env for privacy protection and ignored in gitignore however the .env.sample will list what is required
 
 ---
 
