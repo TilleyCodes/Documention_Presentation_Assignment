@@ -60,7 +60,7 @@ while user_selection != "6":
         print_currency_codes()
         print("\n")
     elif user_selection == "5":
-        print(f"{Fore.white}Here is your conversion history. {Style.reset}\n")
+        print(f"{Fore.white}Conversion history: {Style.reset}\n")
         print_conversion_history(conversion_history)
         print("\n")
     elif user_selection == "6":
