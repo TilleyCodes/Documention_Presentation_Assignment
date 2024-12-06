@@ -39,7 +39,7 @@ N/A
 - The paid API membership has expired since the application assignment. The free access has EUR as the base currency.  
 - If the currency code is inccorect an error message will notify the user and will allow 3 attempts.  
 
-![screenshot for currency code error](../screenshots/convert_using_live_rate_w_error.png)
+![screenshot for currency code error](../screenshots/convert_with_live_rate.png)
 
 ---
 
