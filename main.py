@@ -46,9 +46,9 @@ conversion_history = ConversionHistory("data/conversion_history.json")
 
 user_selection = ""
 
-while user_selection != "6":
+while user_selection != "6": # while the application is running show the user menu or exit the app when 6 is enter
     user_selection = user_menu()
-
+# if, elif and else used to call on the function based on the user selection
     if  user_selection =="1":
         convert_with_live_rate(conversion_history)
     elif user_selection == "2":

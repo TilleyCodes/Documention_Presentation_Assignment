@@ -30,10 +30,10 @@
 - Readme - Installation instructions are very clear (great for none coding users!).    
 - Application is easy to use and easy to navigate ( i couldn't get the convert currencies using live FX rate working but everything else was simple and easy to use).    
 - Only suggestion is maybe add a check after the first currency code (AUD) is selected to let me know that it has worked.    
-- Overall great application and would use in my travels.    
+- Overall great application and would use in my travels.      
 
 **Actions to be complete based on feedback:**    
-N/A
+- N/A
 
 **My notes and plan of action based on feedback:**  
 - The paid API membership has expired since the application assignment. The free access has EUR as the base currency.  
@@ -45,35 +45,41 @@ N/A
 
 ## Feedback 3
 
-**Specific documentation checked:** Code Comments for conversion_history class
-**Feedback from:** Evan & Jack 
-**Date of feedback:** 05/12/2024
+**Specific documentation checked:** Code Comments for conversion_history class  
+**Feedback from:** Evan & Jack    
+**Date of feedback:** 05/12/2024   
 **Feedback Provided:** 
-- This Class is very comprehensive and well written and does exactly as intended. Very detailed notes explain all aspects of the code and answer any question I would’ve had about it. I am honestly hard up for feedback great use of error to handling, JSON serialisation using best practise, and each method has it’s own responsibility and doing so well and concisely.
+- This Class is very comprehensive and well written and does exactly as intended. Very detailed notes explain all aspects of the code and answer any question I would’ve had about it. I am honestly hard up for feedback great use of error to handling, JSON serialisation using best practise, and each method has it’s own responsibility and doing so well and concisely.   
 **Actions to be complete based on feedback:**  
-N/A
+- N/A
 
 --- 
+
 ## Feedback 4
 
-**Specific documentation checked:** ReadMe, main.py, and requirements.txt
-**Feedback from:** Declan W & Earvin 
-**Date of feedback:** 06/12/2024
-**Feedback Provided:** 
+**Specific documentation checked:** ReadMe, main.py, and requirements.txt    
+**Feedback from:** Declan W & Earvin     
+**Date of feedback:** 06/12/2024  
+**Feedback Provided:**   
 - Well-structured Table of Contents and clear navigation.
 - Installation steps and dependency details are comprehensive.
 - Ethical considerations regarding licenses are well-documented.
 - Code in main.py is functional, with meaningful outputs and well-written docstrings.
 
-**Actions to be complete based on feedback:**
+**Actions to be complete based on feedback:**  
 ReadMe:  
 - Add visual aids (e.g., screenshots or diagrams).  
 main.py:  
 - Add inline comments for complex logic.  
 - Clarify variable names for better readability.
 requirements.txt:
-- Differentiate essential vs. optional dependencies.
-
+- Differentiate essential vs. optional dependencies.  
 - Ethical Concern: * Privacy of Conversion History: The application saves user conversion history locally. If not properly secured, this data could expose sensitive financial information.
 
-**My notes and plan of action based on feedback:**    
+**My notes and plan of action based on feedback:**
+- Screenshots added to ReadMe under application help    
+- Added some comments to code to main.py   
+- All packages listed in requirements.txt are essential to run the app as designed  
+- The application doesn’t ask for or store any PII (Personally Identifiable Information - like names, addresses, date of birth, etc)  
+- The application stores the users conversion history – but only the conversions that the user explicitly requests to save. This saved data contains only non-private information (currency codes, dollar amount, rate and user supplied description).
+

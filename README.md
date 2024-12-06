@@ -206,25 +206,35 @@ Simply enter the number corresponding to your selection.
     - ```Please enter the currency code you wish to convert to:``` *The currency code is a 3 letter code representing the currency of choice you are allowed 3 attempts to enter the correct currency code (if unsure you can view the currency code by entering 4 in the main menu).*
     - ```Enter a short description to save a history or enter to exit:``` *If you want to save a history of this conversion, enter a short description otherwise enter with no description will not save.*
 
-
+![screenshot for currency code error](../screenshots/convert_with_live_rate.png)
     
 - ```Enter 2 to convert currencies using your personalised FX rate.```
     - ```Please enter the FX rate you received during your exchange:``` *This is the FX rate given when you the the exchange. You are allowed 3 attempts to enter the a numerical value and cannot be zero*
     - ```Please enter the value you wish to convert:``` *This is the monetary value. You are allowed 3 attempts to enter the a numerical value and cannot be zero*
     - ```Do you want this value "x" converted to your base currency? Enter Y or N:``` *to assist with the calculation, enter Y if this is to be converted back to your base currency, (if the value you had input in the above line is the foreign value) otherwise enter N.*
 
+![screenshot for converting with personalised FX rate](../screenshots/convert_with_live_rate.png)
+
 - ```Enter 3 to calculate the FX rate.```
     - ```Please enter the from value to calculate the FX rate:``` *This is the base monetary value. You are allowed 3 attempts to enter the a numerical value and cannot be zero*
     - ```Please enter the to value to calculate the FX rate:``` *This is the foreign monetary value. You are allowed 3 attempts to enter the a numerical value and cannot be zero*
 
+![screenshot for calculating FX rate](../screenshots/calculate_fx_rate.png)
+
 - ```Enter 4 to view the currency code list.```
     - *By entering 4, the Currency Code table will automatically populate.*
+
+![screenshot currency code list](../screenshots/currency_code_list.png)
 
 - ```Enter 5 to view conversion history.```
     - *By entering 5, the conversion history list will appear if available.*
 
+![screenshot to view conversion history](../screenshots/view_conversion_history.png)
+
 - ```Enter 6 to exit.```
     - *By entering 6, you will exit the application and a farewell message will appear.*
+
+![screenshot for exit application](../screenshots/exit_app.png)
 
 ---
 
