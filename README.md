@@ -5,9 +5,10 @@
 1. [Overview and Purpose](#overview-and-purpose)
 2. [Features and Functions](#features-and-functions)
 3. [User Stories](#user-stories)
-4. [Set Up](#set-up)
-5. [Application Help](<#application help>)
-6. [References](#references)
+4. [Problems the application is addressing](#Problems-the-application-is-addressing)
+5. [Set Up](#set-up)
+6. [Application Help](<#application help>)
+7. [References](#references)
 
 ---
 
@@ -23,10 +24,8 @@ This is an ideal application for users travelling overseas or sending money over
 - Convert currencies using the live FX rate.
     - The app will take the user's selections of base currency to convert to selected foriegn currency using the live FX rate.
 - Convert currencies using an actual FX rate.
-    - The user can input an FX rate and a value amount and the app will output the converted amount either to base currency or foreign currency based on the user's selection - this way the user can track how much they are spending in base currency
-    (eg. when the user goes overseas and exchanges money, the rate may be worse than the market rate).
-    - Similarly this function can be used when sending money overseas
-    (eg. you want to send the value of 100 in foreign currency but don't know how much that is in your base currency). 
+    - The user can input an FX rate and a value amount and the app will output the converted amount either to base currency or foreign currency based on the user's selection - this way the user can track how much they are spending in base currency (eg. when the user goes overseas and exchanges money, the rate may be worse than the market rate).  
+    - Similarly this function can be used when sending money overseas (eg. you want to send the value of 100 in foreign currency but don't know how much that is in your base currency).   
 - Calculate the actual FX rate.
     - The user can input the base currency value and the foreign currency value and the app will calculate the FX rate.  
 - Save live FX rate conversions to a file.
@@ -41,11 +40,22 @@ This is an ideal application for users travelling overseas or sending money over
 - As a user, I want to be able to convert currencies using the live exchange rate.  
     - For example, if I plan to travel to the US I want to know how much my AUD is currently worth base on the live exchange rate.
 - As a user, I want an app that can convert my selected currency using my provided FX rate.
-    - For example, when I am overseas and have already converted my currencies at a counter or from an ATM. Before buying a product like a 30 Euro T-shirt, I want to use the exchange rate I recevied to convert back to my base currency so I know how much the 30 Euro T-shirt is worth in AUD. 
+    - For example, when I am overseas and have already converted my currencies at a counter or from an ATM. Before buying a product like a 30 Euro T-shirt, I want to use the exchange rate I recevied to convert back to my base currency so I know how much the 30 Euro T-shirt is worth in AUD.
 - As a user, I want an app that can calculate the FX rate using the base and foriegn currency.
     - For example, I want to make an online purchase for an item at 10 USD but I'm only prepared to spend maximum 15 AUD. I would put these values into the app to calculate the FX rate so I can keep my eye out for when the rate is close to my limit to make the purchase.
 - As a user, want to be able to save and review my conversions for my record and delete when I want
     - For example, when I'm at the exchange counter I want to review my conversions and compare the rates. This will make it easier when I'm excahnging multiple currencies at the same time.
+
+---
+
+## Problems the application is addressing
+
+- The app's function to convert currencies with a given FX rate will allow the user to understand how much their item is worth in their base currency. As currently there are no currency exchange application that will convert the currencies based on actual FX rates like Xe Currency Converter.  
+    - For example, the user has converted their currencies and an FX rate is given upon exchange. The user sees shoe that can be purchased in their home town but is wanting to check if the shoes are cheaper in their current location. By using this app to convert using the given FX rate, the user will be able to determine whether the shoes a cheaper than back home or not.  
+- The app's function to calculate the FX rate will provide the user a guide on how much the FX rate should be to meet their budget expectation.  
+    - For example, the user has saved 8,000 AUD and is planning an overseas holiday with an estimate cash expense of 5000 Euro. By calculating the FX rate using the two values the user will be able to compare the market rate and determine when to exchange the currencies. Applications like Wise does not offer this.   
+- The app's function to store and display the conversion history will allow the user to keep a record for their own reference.  
+    - For example, the user may have converted currencies many times and want the check the history of their conversion to compare with the current FX rate.
 
 ---
 
